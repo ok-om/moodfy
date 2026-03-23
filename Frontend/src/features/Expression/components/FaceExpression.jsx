@@ -30,10 +30,10 @@ export default function FaceExpression({onClick= ()=>{ }}) {
     }
 
   return (
-    <div style={{ textAlign: "center",display:"flex", flexDirection:"column",  justifyContent: "center",alignItems: "center", height: "100vh"}}>
+    <div style={{ textAlign: "center",display:"flex", flexDirection:"column",  justifyContent: "start",alignItems: "center", height: "80vh",padding:"1rem"}}>
       <video
         ref={videoRef}
-        style={{ width: "700px", borderRadius: "12px" }}
+        style={{ width: "600px", borderRadius: "12px" }}
         playsInline
       />
       <h2>{expression}</h2>
