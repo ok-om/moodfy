@@ -22,12 +22,17 @@ export const useAuth = () => {
         setLoading(false)
     }
 
-    async function handleGetMe() {
-        setLoading(true)
+ async function handleGetMe() {
+    setLoading(true)
+    try {
         const data = await getMe()
         setUser(data.user)
-        setLoading(false)
+    } catch (err) {
+        setUser(null)        
+    } finally {
+        setLoading(false)    
     }
+}
 
     async function handleLogout() {
         setLoading(true)
